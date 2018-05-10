@@ -1,0 +1,130 @@
+<html>
+    <head>
+        <link href='https://fonts.googleapis.com/css?family=Merinda' rel='stylesheet'>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    </head>
+    <style>
+    ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+body{
+        font-family:'Merinda';font-size:22px;
+    }
+    </style>
+	;
+ <ul>
+  <li><a href="http://karthikeyam.pythonanywhere.com/">HOME PAGE</a></li>
+  <li><a href="http://karthikeyam.pythonanywhere.com/sensortable">SENSOR VALUE TABLE</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">GRAPH</a>
+    <div class="dropdown-content">
+      <a href="http://karthikeyam.pythonanywhere.com/flowrate">FLOW RATE</a>
+      <a href="http://karthikeyam.pythonanywhere.com/passage">PASS QUANTITY</a>
+      <a href="http://karthikeyam.pythonanywhere.com/moisture">MOISTURE</a>
+      <a href="http://karthikeyam.pythonanywhere.com/levelrange">WATER LEVEL RANGE</a>
+      <a href="http://karthikeyam.pythonanywhere.com/turgraph">TURBIDITY</a>
+    <li><a href="http://karthikeyam.pythonanywhere.com/map">MAP</a></li>
+    <li><a href="http://karthikeyam.pythonanywhere.com/map2">MAP-2</a></li>
+    </div>
+  </li>
+</ul>
+
+    <BODY background="https://wallpaperlayer.com/img/2015/1/blurred-wallpaper-7600-7894-hd-wallpapers.jpg"><i>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-DY0vfXGk84XrBTJ96d0BeUKEJGPLoOs&callback=myMap"></script>
+	<script type="text/javascript">
+    function initialize() {
+    {%for i in all_sensors %}
+	var mycity = new google.maps.LatLng(13.0295,80.2084);
+	var bigOne1 = new google.maps.LatLng(13.0295,80.2084);
+	var bigOne2 = new google.maps.LatLng(13.0295,80.2145);
+    var center = new google.maps.LatLng(13.0295,80.2084);
+
+        var mapOptions = {
+            center: center,
+            zoom: 14,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        var map = new google.maps.Map(document.getElementById("map"),
+                        mapOptions);
+
+		var circle2 = new google.maps.Circle({
+            center: bigOne2,
+            radius: 300,
+            strokeColor: "#E16D65",
+            strokeOpacity: 1,
+            strokeWeight: 3,
+            fillColor: "#E16D65",
+            fillOpacity: 0
+        });
+        {% if i.sensor1 >= 1 %}
+            circle2.setMap(map);
+        {% endif %}
+        var direction = 1;
+        var rMin = 150, rMax = 300;
+        setInterval(function() {
+            var radius = circle2.getRadius();
+            if ((radius > rMax) || (radius < rMin)) {
+                direction *= -1;
+            }
+            circle2.setRadius(radius + direction*0.65 );
+        }, 50);
+        {% endfor %}
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<center><br><br><br>
+<div id="map" style="width:1000px;height:500px;background:yellow"></div><br><br><br><br><center>
+
+</BODY>
+</HTML>
+</html>

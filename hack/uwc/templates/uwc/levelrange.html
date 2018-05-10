@@ -1,0 +1,855 @@
+<html>
+<meta http-equiv="refresh" content="5">
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #123456;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: blue;
+    text-align: center;
+    padding: 16px 15px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: yellow;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #e8e8e8;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #e2e2e2}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+body {
+	margin: 0;
+	padding: 0;
+	background: #FFFFFF;
+	font-family: 'Abel', sans-serif;
+	font-size: 18px;
+	color: #5B5B5B;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	font-weight: normal;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 199;
+	color: #222221;
+}
+
+h1 {
+	font-size: 10000em;
+}
+
+h2 {
+	font-size: 3.2em;
+}
+
+h3 {
+	font-size: 1.6em;
+}
+
+p, ul, ol {
+	margin-top: 0;
+	line-height: 170%;
+}
+
+
+
+a {
+	color: #5E5E5E;
+}
+
+a:hover {
+}
+
+#wrapper {
+}
+
+.container {
+	width: 1000px;
+	margin: 0px auto;
+}
+
+/* Header */
+
+#header-wrapper {
+	overflow: hidden;
+	height: 600px;
+	background-color: #eeeeee
+}
+
+#header {
+	overflow: hidden;
+	width: 1000px;
+	height: 150px;
+	margin: 0 auto;
+	padding: 0px 0px;
+}
+
+
+
+/* Page */
+
+#page {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 30px 0px;
+	background: #FFFFFF;
+}
+
+/* Content */
+
+#content {
+	float: left;
+	width: 660px;
+	padding: 0px 0px 0px 0px;
+}
+
+.post {
+	overflow: hidden;
+	margin-bottom: 40px;
+}
+
+.post .title {
+	padding: 7px 0px 0px 0px;
+	letter-spacing: -1px;
+}
+
+.post .title a {
+	border: none;
+	text-decoration: none;
+	color: #222222;
+}
+
+.post .meta {
+	margin-bottom: 30px;
+	padding: 10px 0px 0px 0px;
+	text-align: left;
+	font-family: 'Abel', sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+}
+
+.post .meta .date {
+	float: left;
+}
+
+.post .meta .posted {
+	float: right;
+}
+
+.post .meta a {
+}
+
+.post .entry {
+	padding: 0px 0px 40px 0px;
+	text-align: justify;
+}
+
+
+/* Calendar */
+
+#calendar {
+}
+
+#calendar_wrap {
+	padding: 20px;
+}
+
+#calendar table {
+	width: 100%;
+}
+
+#calendar tbody td {
+	text-align: center;
+}
+
+#calendar #next {
+	text-align: right;
+}
+
+/* Three Column Footer Content */
+
+#footer-content-wrapper {
+	background-color: #ffffff
+}
+
+#footer-content {
+	overflow: hidden;
+	width: 1000px;
+	margin: 0px auto;
+	padding: 50px 0px;
+	color: #FFFFFF;
+}
+
+#footer-content h2 {
+	color: #FFFFFF;
+}
+
+#footer-content a {
+}
+
+#footer-bg {
+	overflow: hidden;
+	padding: 30px 0px;
+	background: #E8E8E8;
+}
+
+#footer-content h2 {
+	margin: 0px;
+	padding: 0px 0px 20px 0px;
+	font-size: 26px;
+	color: #FFFFFF;
+}
+
+#footer-content #fbox1 {
+	float: left;
+	width: 300px;
+	margin-right: 50px;
+}
+
+#footer-content #fbox2 {
+	float: left;
+	width: 300px;
+}
+
+#footer-content #fbox3 {
+	float: right;
+	width: 300px;
+}
+
+#footer-content a {
+}
+
+#column1 {
+	float: left;
+	width: 290px;
+	margin-right: 30px;
+}
+
+#column2 {
+	float: left;
+	width: 280px;
+}
+
+#column3 {
+	float: right;
+	width: 260px;
+}
+
+/* Footer */
+
+#footer {
+	height: 140px;
+	margin: 0 auto;
+	padding: 50px 0 15px 0;
+	font-family: 'Abel', sans-serif;
+	background-color: #ffffff
+}
+
+#footer p {
+	margin: 0;
+	padding-top: 10px;
+	letter-spacing: 1px;
+	line-height: normal;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-align: center;
+	color: #2A2A2A;
+}
+
+#footer a {
+	color: #2A2A2A;
+}
+
+
+.list-style1 {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+.list-style1 a {
+	color: #7F7F7F;
+}
+
+/** LIST STYLE 1 */
+
+ul.style1 {
+	margin: 0px;
+	padding: 0px 0px 0px 0px;
+	list-style: none;
+}
+
+ul.style1 li {
+	padding: 10px 0px 10px 0px;
+	border-top: 1px solid #162738;
+	line-height: 160%;
+}
+
+ul.style1 a {
+	display: block;
+	padding: 0px 0px 0px 0px;
+	text-decoration: none;
+	color: #93B2A0;
+}
+
+ul.style1 a:hover {
+	text-decoration: underline;
+}
+
+ul.style1 .first {
+	border-top: none;
+	padding-top: 0px;
+}
+
+#featured-content {
+	overflow: hidden;
+	width: 1000px;
+	margin: 0px auto;
+	padding: 30px 0px;
+	border-bottom: 5px solid #E9EAEE;
+}
+
+#featured-content h2 {
+	padding: 0px 0px 20px 0px;
+	font-size: 30px;
+}
+
+#featured-content #column1 {
+	float: left;
+	width: 300px;
+	margin-right: 50px;
+}
+
+#featured-content #column2 {
+	float: left;
+	width: 300px;
+}
+
+#featured-content #column3 {
+	float: right;
+	width: 300px;
+}
+
+.button a {
+	display: block;
+	float: left;
+	width: 88px;
+	padding: 5px 5px;
+	margin-right: 10px;
+	background: #132434;
+	border-radius: 5px;
+	color: #FFFFFF;
+	text-align: center;
+	text-decoration: none;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #FFFFFF;
+	font-family: 'Abel', sans-serif;
+	font-size: 18px;
+	color: #5B5B5B;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	font-weight: normal;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 200;
+	color: #222222;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+h2 {
+	font-size: 2.8em;
+}
+
+h3 {
+	font-size: 1.6em;
+}
+
+p, ul, ol {
+	margin-top: 0;
+	line-height: 180%;
+}
+
+ul, ol {
+}
+
+a {
+	color: #5E5E5E;
+}
+
+a:hover {
+}
+
+#wrapper {
+}
+
+.container {
+	width: 1000px;
+	margin: 0px auto;
+}
+
+/* Header */
+
+#header-wrapper {
+	overflow: hidden;
+	height: 600px;
+	background: url(images/img01.jpg) repeat;
+}
+
+#header {
+	overflow: hidden;
+	width: 1000px;
+	height: 150px;
+	margin: 0 auto;
+	padding: 0px 0px;
+}
+
+
+/* Page */
+
+#page {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 30px 0px;
+	background: #FFFFFF;
+}
+
+/* Content */
+
+#content {
+	float: left;
+	width: 660px;
+	padding: 0px 0px 0px 0px;
+}
+
+.post {
+	overflow: hidden;
+	margin-bottom: 40px;
+}
+
+.post .title {
+	padding: 7px 0px 0px 0px;
+	letter-spacing: -1px;
+}
+
+.post .title a {
+	border: none;
+	text-decoration: none;
+	color: #222222;
+}
+
+.post .meta {
+	margin-bottom: 30px;
+	padding: 10px 0px 0px 0px;
+	text-align: left;
+	font-family: 'Abel', sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+}
+
+.post .meta .date {
+	float: left;
+}
+
+.post .meta .posted {
+	float: right;
+}
+
+.post .meta a {
+}
+
+.post .entry {
+	padding: 0px 0px 40px 0px;
+	text-align: justify;
+}
+
+
+
+/* Three Column Footer Content */
+
+#footer-content-wrapper {
+	background: #F4F3EE url(images/img05.jpg) repeat;
+}
+
+#footer-content {
+	overflow: hidden;
+	width: 1000px;
+	margin: 0px auto;
+	padding: 50px 0px;
+	color: #FFFFFF;
+}
+
+#footer-content h2 {
+	color: #FFFFFF;
+}
+
+#footer-content a {
+}
+
+#footer-bg {
+	overflow: hidden;
+	padding: 30px 0px;
+	background: #E8E8E8;
+}
+
+#footer-content h2 {
+	margin: 0px;
+	padding: 0px 0px 20px 0px;
+	font-size: 26px;
+	color: #FFFFFF;
+}
+
+#footer-content #fbox1 {
+	float: left;
+	width: 300px;
+	margin-right: 50px;
+}
+
+#footer-content #fbox2 {
+	float: left;
+	width: 300px;
+}
+
+#footer-content #fbox3 {
+	float: right;
+	width: 300px;
+}
+
+#footer-content a {
+}
+
+#column1 {
+	float: left;
+	width: 290px;
+	margin-right: 30px;
+}
+
+#column2 {
+	float: left;
+	width: 280px;
+}
+
+#column3 {
+	float: right;
+	width: 260px;
+}
+
+/* Footer */
+
+#footer {
+	height: 140px;
+	margin: 0 auto;
+	padding: 50px 0 15px 0;
+	font-family: 'Abel', sans-serif;
+	background: #D6D6D6 url(images/img01.jpg) repeat;
+}
+
+#footer p {
+	margin: 0;
+	padding-top: 10px;
+	letter-spacing: 1px;
+	line-height: normal;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-align: center;
+	color: #2A2A2A;
+}
+
+#footer a {
+	color: #2A2A2A;
+}
+
+
+.list-style1 {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+.list-style1 a {
+	color: #7F7F7F;
+}
+
+/** LIST STYLE 1 */
+
+ul.style1 {
+	margin: 0px;
+	padding: 0px 0px 0px 0px;
+	list-style: none;
+}
+
+ul.style1 li {
+	padding: 10px 0px 10px 0px;
+	border-top: 1px solid #162738;
+	line-height: 160%;
+}
+
+ul.style1 a {
+	display: block;
+	padding: 0px 0px 0px 0px;
+	text-decoration: none;
+	color: #93B2A0;
+}
+
+ul.style1 a:hover {
+	text-decoration: underline;
+}
+
+ul.style1 .first {
+	border-top: none;
+	padding-top: 0px;
+}
+
+#featured-content {
+	overflow: hidden;
+	width: 1000px;
+	margin: 0px auto;
+	padding: 30px 0px;
+	border-bottom: 5px solid #E9EAEE;
+}
+
+#featured-content h2 {
+	padding: 0px 0px 20px 0px;
+	font-size: 30px;
+}
+
+#featured-content #column1 {
+	float: left;
+	width: 300px;
+	margin-right: 50px;
+}
+
+#featured-content #column2 {
+	float: left;
+	width: 300px;
+}
+
+#featured-content #column3 {
+	float: right;
+	width: 300px;
+}
+
+.button a {
+	display: block;
+	float: left;
+	width: 88px;
+	padding: 5px 5px;
+	margin-right: 10px;
+	background: #132434;
+	border-radius: 5px;
+	color: #FFFFFF;
+	text-align: center;
+	text-decoration: none;
+}
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+ border-top: 16px solid blue;
+ border-right: 16px solid green;
+ border-bottom: 16px solid red;
+ border-left: 16px solid pink;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+
+</style>
+<head>
+    <style>
+        #chartdiv {
+          width: 80%;
+          height: 435px;
+          font-size: 11px;
+        }
+    </style>
+</head>
+ <ul>
+  <li><a href="http://karthikeyam.pythonanywhere.com/">HOME PAGE</a></li>
+  <li><a href="http://karthikeyam.pythonanywhere.com/sensortable">SENSOR VALUE TABLE</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">GRAPH</a>
+    <div class="dropdown-content">
+      <a href="http://karthikeyam.pythonanywhere.com/flowrate">FLOW RATE</a>
+      <a href="http://karthikeyam.pythonanywhere.com/passage">PASS QUANTITY</a>
+      <a href="http://karthikeyam.pythonanywhere.com/moisture">MOISTURE</a>
+      <a href="http://karthikeyam.pythonanywhere.com/levelrange">WATER LEVEL RANGE</a>
+      <a href="http://karthikeyam.pythonanywhere.com/turgraph">TURBIDITY</a>
+    <li><a href="http://karthikeyam.pythonanywhere.com/map">MAP</a></li>
+    <li><a href="http://karthikeyam.pythonanywhere.com/map2">MAP-2</a></li>
+    <li><a href="http://karthikeyam.pythonanywhere.com/turbidity">TURBIDITY CHECK</a></li>
+    </div>
+  </li>
+</ul>
+<body style="background-color: #4d4d4d">
+<br><br><br><br>
+
+<center><span style="font-size:40px;color:#ffcc00">
+<u>WATER LEVEL RANGE'S(min)(in mL)</u><br>
+</span></u>
+{% for i in all_sensors %}
+    <p id={{i.serialId}} style="display:none">{{i.sensor4}}</p>
+{% endfor %}
+<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+<script src="https://www.amcharts.com/lib/3/serial.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.2.min.jsa" type="text/javascript"></script>
+<script type="text/javascript">
+    let a=[0,0,1000,0,0,0,6,0,0,0]
+    for(i=0;i<10;i++)
+      a[i]=document.getElementById(String(i)).innerHTML;
+    var chart = AmCharts.makeChart("chartdiv", {
+  "type": "serial",
+  "startDuration": 1.5,
+  "dataProvider": [{
+    "country": "1",
+    "visits": a[0],
+    "color": "#FF6600"
+  }, {
+    "country": "2",
+    "visits": a[1],
+    "color": "#FF9E01"
+  }, {
+    "country": "3",
+    "visits": a[2],
+    "color": "#FCD202"
+  }, {
+    "country": "4",
+    "visits": a[3],
+    "color": "#F8FF01"
+  }, {
+    "country": "5",
+    "visits": a[4],
+    "color": "#B0DE09"
+  }, {
+    "country": "6",
+    "visits": a[5],
+    "color": "#04D215"
+  }, {
+    "country": "7",
+    "visits": a[6],
+    "color": "#0D8ECF"
+  }, {
+    "country": "8",
+    "visits": a[7],
+    "color": "#0D52D1"
+  }, {
+    "country": "9",
+    "visits": a[8],
+    "color": "#2A0CD0"
+  }, {
+    "country": "10",
+    "visits": a[9],
+    "color": "#8A0CCF"
+  }],
+  "valueAxes": [{
+    "position": "left",
+    "axisAlpha": 0,
+    "gridAlpha": 0
+  }],
+  "graphs": [{
+    "balloonText": "[[category]]: <b>[[value]]</b>",
+    "colorField": "color",
+    "fillAlphas": 0.85,
+    "lineAlpha": 0.1,
+    "type": "column",
+    "topRadius": 1,
+    "valueField": "visits"
+  }],
+  "depth3D": 40,
+  "angle": 30,
+  "chartCursor": {
+    "categoryBalloonEnabled": false,
+    "cursorAlpha": 0,
+    "zoomable": false
+  },
+  "categoryField": "country",
+  "categoryAxis": {
+    "gridPosition": "start",
+    "axisAlpha": 0,
+    "gridAlpha": 0
+
+  },
+  "exportConfig": {
+    "menuTop": "20px",
+    "menuRight": "20px",
+    "menuItems": [{
+      "icon": '/lib/3/images/export.png',
+      "format": 'png'
+    }]
+  }
+}, 0);
+
+jQuery('.chart-input').off().on('input change', function() {
+  var property = jQuery(this).data('property');
+  var target = chart;
+  chart.startDuration = 0;
+
+  if (property == 'topRadius') {
+    target = chart.graphs[0];
+  }
+
+  target[property] = this.value;
+  chart.validateNow();
+});
+</script>
+<div id="chartdiv"></div>
+________________________________________________________________________________________________________________________><br>
+<span style="font-size:28px;color:#ffcc00">
+Readings based on time--><br>
+(latest at left)
+<span>
+<div class="container-fluid"></div>
+</center></body>
+</html>

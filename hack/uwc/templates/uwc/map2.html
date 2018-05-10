@@ -1,0 +1,557 @@
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Abel|Satisfy' rel='stylesheet' type='text/css' />
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #123456;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: blue;
+    text-align: center;
+    padding: 16px 15px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: yellow;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #e8e8e8;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #e2e2e2}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+body {
+	margin: 0;
+	padding: 0;
+	background: #FFFFFF;
+	font-family: 'Abel', sans-serif;
+	font-size: 18px;
+	color: #5B5B5B;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	font-weight: normal;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 199;
+	color: #222221;
+}
+
+h1 {
+	font-size: 10000em;
+}
+
+h2 {
+	font-size: 3.2em;
+}
+
+h3 {
+	font-size: 1.6em;
+}
+
+p, ul, ol {
+	margin-top: 0;
+	line-height: 170%;
+}
+
+
+
+a {
+	color: #5E5E5E;
+}
+
+a:hover {
+}
+
+#wrapper {
+}
+
+.container {
+	width: 1000px;
+	margin: 0px auto;
+}
+
+/* Header */
+
+#header-wrapper {
+	overflow: hidden;
+	height: 600px;
+	background-color: #eeeeee
+}
+
+#header {
+	overflow: hidden;
+	width: 1000px;
+	height: 150px;
+	margin: 0 auto;
+	padding: 0px 0px;
+}
+
+
+
+/* Page */
+
+#page {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 30px 0px;
+	background: #FFFFFF;
+}
+
+/* Content */
+
+#content {
+	float: left;
+	width: 660px;
+	padding: 0px 0px 0px 0px;
+}
+
+.post {
+	overflow: hidden;
+	margin-bottom: 40px;
+}
+
+.post .title {
+	padding: 7px 0px 0px 0px;
+	letter-spacing: -1px;
+}
+
+.post .title a {
+	border: none;
+	text-decoration: none;
+	color: #222222;
+}
+
+.post .meta {
+	margin-bottom: 30px;
+	padding: 10px 0px 0px 0px;
+	text-align: left;
+	font-family: 'Abel', sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+}
+
+.post .meta .date {
+	float: left;
+}
+
+.post .meta .posted {
+	float: right;
+}
+
+.post .meta a {
+}
+
+.post .entry {
+	padding: 0px 0px 40px 0px;
+	text-align: justify;
+}
+
+
+/* Calendar */
+
+#calendar {
+}
+
+#calendar_wrap {
+	padding: 20px;
+}
+
+#calendar table {
+	width: 100%;
+}
+
+#calendar tbody td {
+	text-align: center;
+}
+
+#calendar #next {
+	text-align: right;
+}
+
+/* Three Column Footer Content */
+
+#footer-content-wrapper {
+	background-color: #ffffff
+}
+
+#footer-content {
+	overflow: hidden;
+	width: 1000px;
+	margin: 0px auto;
+	padding: 50px 0px;
+	color: #FFFFFF;
+}
+
+#footer-content h2 {
+	color: #FFFFFF;
+}
+
+#footer-content a {
+}
+
+#footer-bg {
+	overflow: hidden;
+	padding: 30px 0px;
+	background: #E8E8E8;
+}
+
+#footer-content h2 {
+	margin: 0px;
+	padding: 0px 0px 20px 0px;
+	font-size: 26px;
+	color: #FFFFFF;
+}
+
+#footer-content #fbox1 {
+	float: left;
+	width: 300px;
+	margin-right: 50px;
+}
+
+#footer-content #fbox2 {
+	float: left;
+	width: 300px;
+}
+
+#footer-content #fbox3 {
+	float: right;
+	width: 300px;
+}
+
+#footer-content a {
+}
+
+#column1 {
+	float: left;
+	width: 290px;
+	margin-right: 30px;
+}
+
+#column2 {
+	float: left;
+	width: 280px;
+}
+
+#column3 {
+	float: right;
+	width: 260px;
+}
+
+/* Footer */
+
+#footer {
+	height: 140px;
+	margin: 0 auto;
+	padding: 50px 0 15px 0;
+	font-family: 'Abel', sans-serif;
+	background-color: #ffffff
+}
+
+#footer p {
+	margin: 0;
+	padding-top: 10px;
+	letter-spacing: 1px;
+	line-height: normal;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-align: center;
+	color: #2A2A2A;
+}
+
+#footer a {
+	color: #2A2A2A;
+}
+
+
+.list-style1 {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+.list-style1 a {
+	color: #7F7F7F;
+}
+
+/** LIST STYLE 1 */
+
+ul.style1 {
+	margin: 0px;
+	padding: 0px 0px 0px 0px;
+	list-style: none;
+}
+
+ul.style1 li {
+	padding: 10px 0px 10px 0px;
+	border-top: 1px solid #162738;
+	line-height: 160%;
+}
+
+ul.style1 a {
+	display: block;
+	padding: 0px 0px 0px 0px;
+	text-decoration: none;
+	color: #93B2A0;
+}
+
+ul.style1 a:hover {
+	text-decoration: underline;
+}
+
+ul.style1 .first {
+	border-top: none;
+	padding-top: 0px;
+}
+
+#featured-content {
+	overflow: hidden;
+	width: 1000px;
+	margin: 0px auto;
+	padding: 30px 0px;
+	border-bottom: 5px solid #E9EAEE;
+}
+
+#featured-content h2 {
+	padding: 0px 0px 20px 0px;
+	font-size: 30px;
+}
+
+#featured-content #column1 {
+	float: left;
+	width: 300px;
+	margin-right: 50px;
+}
+
+#featured-content #column2 {
+	float: left;
+	width: 300px;
+}
+
+#featured-content #column3 {
+	float: right;
+	width: 300px;
+}
+
+.button a {
+	display: block;
+	float: left;
+	width: 88px;
+	padding: 5px 5px;
+	margin-right: 10px;
+	background: #132434;
+	border-radius: 5px;
+	color: #FFFFFF;
+	text-align: center;
+	text-decoration: none;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #FFFFFF;
+	font-family: 'Abel', sans-serif;
+	font-size: 18px;
+	color: #5B5B5B;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	font-weight: normal;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 200;
+	color: #222222;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+h2 {
+	font-size: 2.8em;
+}
+
+h3 {
+	font-size: 1.6em;
+}
+
+p, ul, ol {
+	margin-top: 0;
+	line-height: 180%;
+}
+
+a {
+	color: #5E5E5E;
+}
+
+a:hover {
+}
+
+/** LIST STYLE 1 */
+
+ul.style1 {
+	margin: 0px;
+	padding: 0px 0px 0px 0px;
+	list-style: none;
+}
+
+ul.style1 li {
+	padding: 10px 0px 10px 0px;
+	border-top: 1px solid #162738;
+	line-height: 160%;
+}
+
+ul.style1 a {
+	display: block;
+	padding: 0px 0px 0px 0px;
+	text-decoration: none;
+	color: #93B2A0;
+}
+
+ul.style1 a:hover {
+	text-decoration: underline;
+}
+
+ul.style1 .first {
+	border-top: none;
+	padding-top: 0px;
+}
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+ border-top: 16px solid blue;
+ border-right: 16px solid green;
+ border-bottom: 16px solid red;
+ border-left: 16px solid pink;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 }
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom {
+  from{ bottom:-100px; opacity:0 }
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+
+</style>
+
+<script>
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+
+</head>
+<body style="background-color:#E6E6FA">
+ <ul>
+  <li><a href="http://karthikeyam.pythonanywhere.com/">HOME PAGE</a></li>
+  <li><a href="http://karthikeyam.pythonanywhere.com/sensortable">SENSOR VALUE TABLE</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">GRAPH</a>
+    <div class="dropdown-content">
+      <a href="http://karthikeyam.pythonanywhere.com/flowrate">FLOW RATE</a>
+      <a href="http://karthikeyam.pythonanywhere.com/passage">PASS QUANTITY</a>
+      <a href="http://karthikeyam.pythonanywhere.com/moisture">MOISTURE</a>
+      <a href="http://karthikeyam.pythonanywhere.com/levelrange">WATER LEVEL RANGE</a>
+      <a href="http://karthikeyam.pythonanywhere.com/turgraph">TURBIDITY</a>
+    <li><a href="http://karthikeyam.pythonanywhere.com/map">MAP</a></li>
+    <li><a href="http://karthikeyam.pythonanywhere.com/map2">MAP-2</a></li>
+    </div>
+  </li>
+</ul>
+
+<body onload="myFunction()" style="margin:0;">
+
+<div id="loader"></div>
+
+<div style="display:none;" id="myDiv" class="animate-bottom">
+<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d31032.414613739307!2d79.96916406509543!3d13.532410965779423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x3a4d7a7a83af1843%3A0x12ff1df23a080295!2sSri+City+Water+Treatment+Plant%2C+Sri+City%2C+Andhra+Pradesh!3m2!1d13.517984!2d79.9750114!4m5!1s0x3a4d70b7ba21ad55%3A0xda80f7012f3985d6!2sInstitute+for+Financial+Management+and+Research%2C+5655+Central+Express+Way%2C+Sri+City%2C+Andhra+Pradesh+517646!3m2!1d13.548223199999999!2d80.0002092!5e0!3m2!1sen!2sin!4v1507451845594" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+<br><br><br><br><br><br><br><br>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d31033.11018368117!2d79.97370251509165!3d13.527073966936587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x3a4d7a7a83af1843%3A0x12ff1df23a080295!2sSri+City+Water+Treatment+Plant%2C+Sricity%2C+Andhra+Pradesh!3m2!1d13.517984!2d79.9750114!4m5!1s0x3a4d77493a2cc327%3A0xdd128fc7db842b06!2sEgumadurai+Rd!3m2!1d13.5389688!2d80.0093354!5e0!3m2!1sen!2sin!4v1507452074793" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+<br><br><br><br><br><br><br><br>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d15517.496332293133!2d79.97361471368727!3d13.512619611864524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x3a4d7a7a83af1843%3A0x12ff1df23a080295!2sSri+City+Water+Treatment+Plant%2C+200+WTP+Drive%2C+Sri+City%2C+Andhra+Pradesh+517646%2C+India!3m2!1d13.517984!2d79.9750114!4m5!1s0x3a4d7a11f1c3cee1%3A0xee16396e02aedb11!2sChigurupalem%2C+Sri+City%2C+Andhra+Pradesh%2C+India!3m2!1d13.514517099999999!2d79.99164999999999!5e0!3m2!1sen!2sin!4v1507452474186" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+</div>
